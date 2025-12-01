@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Test 3 - Blank File
+      - name: Check for blank file 
         run: |
           python3 find_lowest_number.py test/test3_input.txt test3_output.txt
           diff test3_output.txt test/test3_expected.txt
