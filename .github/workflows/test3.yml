@@ -1,8 +1,7 @@
 name: Test for Assignment 11
 
-on: 
-    push:
-  
+on: [push] 
+
 
 jobs:
   test:
