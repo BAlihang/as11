@@ -19,6 +19,6 @@ jobs:
           python-version: '3.x'
 
       - name: Check for 10 numbers
-        run: |
+        run: 
           python3 find_lowest_number.py test/test1_input.txt test1_output.txt
           diff test1_output.txt test/test1_expected.txt
