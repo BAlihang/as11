@@ -1,0 +1,24 @@
+name: Test for Assignment 11
+
+on: 
+    push:
+  
+
+jobs:
+  test:
+    name: Run Automated Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Test 3 - Blank File
+        run: |
+          python3 find_lowest_number.py test/test3_input.txt test3_output.txt
+          diff test3_output.txt test/test3_expected.txt
